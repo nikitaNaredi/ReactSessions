@@ -1,3 +1,10 @@
+Profiler
+HOC
+
+Read more on String Refs/Rconcilation/Uncontrolled Components
+
+
+-----------------------------------------------------
 React events
 - <button onClick={shoot}>Take the Shot!</button>
 

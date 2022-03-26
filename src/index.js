@@ -1,6 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+// import ErrorBoundary from "./ErrorBoundary";
+// import InheritanceAndComposition from "./InheritanceAndComposition";
+import RefsComponent from "./RefsComponent";
+// ReactDOM.render(
+//   <ErrorBoundary>
+//     <InheritanceAndComposition numbers={[1, 2, 3]} />
+//   </ErrorBoundary>,
+//   document.getElementById("root")
+// );
 
-const element = <h1>Hello World!</h1>;
-ReactDOM.render(element, document.getElementById("root"));
+ReactDOM.render(
+  <RefsComponent></RefsComponent>,
+  document.getElementById("root")
+);

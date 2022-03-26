@@ -14,4 +14,5 @@ function StateComponent() {
   );
   return element;
 }
-ReactDOM.render(<StateComponent />, document.getElementById("root"));
+
+export default StateComponent;
