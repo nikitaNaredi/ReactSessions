@@ -5,7 +5,7 @@ const FancyButton = React.forwardRef((props, ref) => (
     ref={ref}
     className="FancyButton"
     onClick={() => {
-      console.log("inside click");
+      console.log("Child button clicked");
     }}
   >
     {props.children}
@@ -15,16 +15,20 @@ const FancyButton = React.forwardRef((props, ref) => (
 const RefsComponent = () => {
   const ref = React.createRef();
 
+  const clickFunction = () => {
+    ref.current.click();
+  };
+
   return (
     <>
-      <div
+      <button
         onClick={() => {
-          ref.current.click();
+          console.log("Parent Button clicked");
+          clickFunction();
         }}
       >
-        Hello
-      </div>
-      <button ref={ref}>Inner button</button>
+        Parent button
+      </button>
       <br />
       <hr />
       <FancyButton ref={ref}>Click me!</FancyButton>
