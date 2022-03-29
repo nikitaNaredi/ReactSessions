@@ -1,7 +1,6 @@
 Profiler
 HOC
-
-Read more on String Refs/Rconcilation/Uncontrolled Components
+Read more on String/callback Refs/Rconcilation/Uncontrolled Components
 
 
 -----------------------------------------------------

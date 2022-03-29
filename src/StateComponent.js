@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 function StateComponent() {
   const [count, setCount] = useState(0);
 
-  function increment() {
+  // function increment() {
+  //   setCount(count + 1);
+  //   console.log("inside increment");
+  // }
+
+  const increment = useCallback(() => {
     setCount(count + 1);
-  }
+    console.log("inside increment");
+  }, []);
 
   const element = (
     <div>
