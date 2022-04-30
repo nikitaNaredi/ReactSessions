@@ -1,13 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
-function Greeting(props) {
-  const isLoggedIn = props.isLoggedIn;
-  if (isLoggedIn) {
-    return <div>Logged in!!</div>;
-  }
-  return <div>You need to Log in!!</div>;
+import React, { useState } from "react";
+import ChildComponent from "./ChildComponent";
+function PropsComponent() {
+  const [count, setCount] = useState(false);
+  return (
+    <>
+      <button
+        onClick={() => {
+          setCount((c) => !c);
+        }}
+      >
+        Click
+      </button>
+      <ChildComponent isLoggedIn={count} />;
+    </>
+  );
 }
-ReactDOM.render(
-  <Greeting isLoggedIn={false} />,
-  document.getElementById("root")
-);
+
+export default PropsComponent;
